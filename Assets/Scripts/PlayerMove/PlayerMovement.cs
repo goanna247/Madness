@@ -14,16 +14,20 @@ public class PlayerMovement : MonoBehaviour {
 	public float jumpForce = 5f;
 	private float verticalVelocity;
 
+	private float speedOfShip = 1f;
+
 	void Awake() {
 		characterController = GetComponent<CharacterController>();
 	}
 
 	void Update() {
 		MoveThePlayer();
+		characterController.Move(Vector3.forward * Time.deltaTime * speedOfShip);
 	}
 
 	void MoveThePlayer() {
 		moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
+		
 
 		moveDirection = transform.TransformDirection(moveDirection);
 		moveDirection *= speed * Time.deltaTime;
@@ -31,6 +35,7 @@ public class PlayerMovement : MonoBehaviour {
 		ApplyGravity();
 
 		characterController.Move(moveDirection);
+
 	}
 
 	void ApplyGravity() {

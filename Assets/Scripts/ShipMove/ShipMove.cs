@@ -3,26 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class ShipMove : MonoBehaviour {
-	
-	Rigidbody shipRigidBody;
 
-	[SerializeField]
-	private Transform player, ship;
-	private Camera playerCam;
-
-	[SerializeField]
-	float speed;
-
+	private float speedOfShip = 1f; //need to also change PlayerMovement script
 
 	void Start() {
-		shipRigidBody = GetComponent<Rigidbody>();
-		speed = 1.0f;
+		transform.position = new Vector3(1,1,0);
 	}
 
 	void Update() {
-		// player.Translate(Vector3.down * Time.deltaTime * speed);
-		// ship.Translate(Vector3.down * Time.deltaTime * speed);
-		// playerCam.transform.position = new (Vector3.down * Time.deltaTime * speed);
-
+		transform.position += new Vector3(0, 0, 1 * Time.deltaTime);
 	}
 }
