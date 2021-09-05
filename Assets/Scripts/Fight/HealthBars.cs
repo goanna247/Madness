@@ -14,6 +14,8 @@ public class HealthBars : MonoBehaviour {
 	public void DisplaySailStats(float healthValue) {
 		healthValue /= 100f;
 		playerSailHealth.fillAmount = healthValue;
+		// Debug.Log("you alive bro");
+		// Debug.Log(healthValue);
 	}
 
 	public void DisplayShipStats(float healthValue) {
@@ -26,7 +28,7 @@ public class HealthBars : MonoBehaviour {
 		playerCrewHealth.fillAmount = healthValue;
 	}
 
-	public void DisplayCannonHealth(float healthValue) {
+	public void DisplayCannonStats(float healthValue) {
 		healthValue /= 100f;
 		playerCannonHealth.fillAmount = healthValue;
 	}

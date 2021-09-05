@@ -4,11 +4,16 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+
 public class ShipActions : MonoBehaviour {
 
 	private bool belowDeckArea = false;
 	private bool steeringArea = false;
 	private bool sailArea = false;
+
+	float shipSpeed = Globals.shipSpeed;
+
+	
 
 	void Start() {}
 
@@ -35,20 +40,28 @@ public class ShipActions : MonoBehaviour {
 	}
 
 	public void Update() {
+		Globals.shipSpeed = shipSpeed;
+
 		if (belowDeckArea && Input.GetKey("i")) {
 			SceneManager.LoadScene("BelowDeck");
 		}
 
-		if (sailArea && Input.GetKey("+")) {
-			//vroom vroom bitch
-		} else if (sailArea && Input.GetKey("-")) {
-			//go slower 
+		if (sailArea && Input.GetKeyUp("9")) {
+			shipSpeed = shipSpeed + 0.5f; //vroom vroom bitch
+			// Debug.Log("plus speed");
+		} else if (sailArea && Input.GetKeyUp("0")) {
+			shipSpeed = shipSpeed - 0.5f; //go slower 
+			// Debug.Log("minus speed");
 		}
+
+		// Debug.Log(shipSpeed);
 
 		if (steeringArea && Input.GetKey("l")) {
 			//go left
+			Debug.Log("Left");
 		} else if (steeringArea && Input.GetKey("r")) {
 			//go right 
+			Debug.Log("Right");
 		}
 	}
 }

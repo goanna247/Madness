@@ -14,15 +14,18 @@ public class PlayerMovement : MonoBehaviour {
 	public float jumpForce = 5f;
 	private float verticalVelocity;
 
-	private float speedOfShip = 1f;
+	private float speedOfShip = Globals.shipSpeed;
 
 	void Awake() {
 		characterController = GetComponent<CharacterController>();
 	}
 
 	void Update() {
+		// speedOfShip 
 		MoveThePlayer();
-		characterController.Move(Vector3.forward * Time.deltaTime * speedOfShip);
+		// characterController.Move(Vector3.forward * Time.deltaTime * speedOfShip);
+
+		// Debug.Log(s		// Debug.Log("Player speed =" + speedOfShip);peedOfShip);
 	}
 
 	void MoveThePlayer() {
