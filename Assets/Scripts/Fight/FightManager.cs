@@ -23,6 +23,9 @@ public class FightManager : MonoBehaviour {
 	public bool Victory = false;
 	public bool Loss = false;
 
+	[SerializeField] private Text playerLevel;
+	[SerializeField] private Text pirateLevel;
+
 	//victory message 
 	[SerializeField] private Image victoryMessage;
 	[SerializeField] private Image victoryText;
@@ -50,11 +53,25 @@ public class FightManager : MonoBehaviour {
 
 	private bool generatedLoot;
 
+	private int generatePirateLevel;
+
 	void Start() {
 		generatedLoot = false;
+
+		generatePirateLevel = Random.Range(Globals.PlayerLevel - 1, Globals.PlayerLevel + 2);
+
+		if (generatePirateLevel == 0) {
+			Globals.PirateLevel = 1;
+		} else {
+			Globals.PirateLevel = generatePirateLevel;
+		}
 	}
 
 	void Update() {
+		Cursor.visible = true;
+		Cursor.lockState = CursorLockMode.None;
+
+
 		healthBars.DisplaySailStats(Globals.PlayerSailHealthVar);
 		healthBars.DisplayShipStats(Globals.PlayerShipHealthVar);
 		healthBars.DisplayCrewStats(Globals.PlayerCrewHealthVar);
@@ -64,6 +81,9 @@ public class FightManager : MonoBehaviour {
 		healthBars.DisplayEnemySail(Globals.PirateSailHealthVar);
 		healthBars.DisplayEnemyShip(Globals.PirateShipHealthVar);
 		healthBars.DisplayEnemyCannon(Globals.PirateCannonHealthVar);
+
+		pirateLevel.text = Globals.PirateLevel.ToString();
+		playerLevel.text = Globals.PlayerLevel.ToString();
 
 		if (Globals.PirateSailHealthVar > 0 && Globals.PirateShipHealthVar > 0 && Globals.PirateCrewHealthVar > 0 && Globals.PirateCannonHealthVar > 0) {
 			if (playerTurn) {
@@ -312,9 +332,13 @@ public class FightManager : MonoBehaviour {
 
 	private void GenerateLoot() {
 		appleLoot = Mathf.FloorToInt(2.1f * Globals.PlayerLevel * Random.Range(1f, 2f)); //0.8 is the apple coefficient * (float)Random.Range(0.4, 1.2)
+		Globals.apples += appleLoot;
 		meatLoot = Mathf.FloorToInt(1.2f * Globals.PlayerLevel * Random.Range(1f, 2f)); //* (float)Random.Range(0.5, 2)
+		Globals.meat += meatLoot;
 		bulletLoot = Mathf.FloorToInt(3.4f * Globals.PlayerLevel * Random.Range(1.2f, 2f)); //* (float)Random.Range(1.2, 2)
+		Globals.bullets += bulletLoot;
 		cannonLoot = Mathf.FloorToInt(2.2f * Globals.PlayerLevel * Random.Range(1.2f, 2.1f)); //* (float)Random.Range(1.2, 2.1)
+		Globals.cannonBalls += cannonLoot;
 		generatedLoot = true;
 	}
 }

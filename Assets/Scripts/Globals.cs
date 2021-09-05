@@ -3,10 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class Globals : MonoBehaviour {
-	public static float shipSpeed = 3f; 
+	public static float shipSpeed = 7f; 
 	public static string selectedShipPiece = "";
+
 	public static int bullets = 10;
 	public static int cannonBalls = 8;
+	public static int apples = 5;
+	public static int meat = 2;
 
 	//player health 
 	public static float PlayerSailHealthVar = 100f;
@@ -28,6 +31,9 @@ public class Globals : MonoBehaviour {
 	public static float PirateShootDamage = 8f;
 
 	public static int PlayerLevel = 1;
+	public static int PirateLevel = 1;
+
+
 
 	void Update() {
 		// Debug.Log(shipSpeed);

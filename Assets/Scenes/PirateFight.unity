@@ -2275,6 +2275,8 @@ MonoBehaviour:
   playerTurn: 1
   Victory: 0
   Loss: 0
+  playerLevel: {fileID: 831461658}
+  pirateLevel: {fileID: 1633764128}
   victoryMessage: {fileID: 975021699}
   victoryText: {fileID: 819027178}
   apples: {fileID: 1439532734}
