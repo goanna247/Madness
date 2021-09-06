@@ -24,11 +24,11 @@ public class Globals : MonoBehaviour {
 	public static float PirateCannonHealthVar = 90f;
 
 	//damage
-	public static float PlayerBlastDamage = 20f;
+	public static float PlayerBlastDamage = 28f;
 	public static float PlayerShootDamage = 10f;
 
-	public static float PirateBlastDamage = 15f;
-	public static float PirateShootDamage = 8f;
+	public static float PirateBlastDamage = 20f;
+	public static float PirateShootDamage = 15f;
 
 	public static int PlayerLevel = 1;
 	public static int PirateLevel = 1;
