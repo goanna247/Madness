@@ -18,6 +18,10 @@ public class BelowDeckButtonManager : MonoBehaviour {
 	[SerializeField] private Text gunNumber;
 
 	void Start() {
+
+	}
+
+	void Update() {
 		if (Globals.PlayerCannonHealthVar < 100 || Globals.PlayerCrewHealthVar < 100 || Globals.PlayerSailHealthVar < 100 || Globals.PlayerShipHealthVar < 100) {
 			applesButton.interactable = true;
 			meatButton.interactable = true;
@@ -25,9 +29,7 @@ public class BelowDeckButtonManager : MonoBehaviour {
 			applesButton.interactable = false;
 			meatButton.interactable = false;
 		}
-	}
 
-	void Update() {
 		Cursor.visible = true;
 		Cursor.lockState = CursorLockMode.None;
 

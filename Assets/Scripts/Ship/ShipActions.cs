@@ -13,6 +13,8 @@ public class ShipActions : MonoBehaviour {
 
 	float shipSpeed = Globals.shipSpeed;
 
+	[SerializeField] private GameObject ship;
+
 	
 
 	void Start() {}
@@ -46,22 +48,25 @@ public class ShipActions : MonoBehaviour {
 			SceneManager.LoadScene("BelowDeck");
 		}
 
-		if (sailArea && Input.GetKeyUp("9")) {
-			shipSpeed = shipSpeed + 0.5f; //vroom vroom bitch
-			// Debug.Log("plus speed");
-		} else if (sailArea && Input.GetKeyUp("0")) {
-			shipSpeed = shipSpeed - 0.5f; //go slower 
-			// Debug.Log("minus speed");
+		if (Globals.shipSpeed <= 10f) {
+			if (Input.GetKeyUp("1")) {
+				Globals.shipSpeed += 0.5f; //vroom vroom bitch
+			}
+		}
+		if (Globals.shipSpeed > 0f) {
+			if (Input.GetKeyUp("0")) {
+				shipSpeed = shipSpeed - 0.5f; //go slower 
+			}
 		}
 
-		// Debug.Log(shipSpeed);
 
-		if (steeringArea && Input.GetKey("l")) {
-			//go left
-			Debug.Log("Left");
-		} else if (steeringArea && Input.GetKey("r")) {
-			//go right 
-			Debug.Log("Right");
+		//47 88! 47 88!
+		if (Input.GetKey("4")) {
+			if (Input.GetKey("7")) {
+				if (Input.GetKey("8")) {
+						ship.GetComponent<Renderer>().material.color = new Color(1f, 0.3f, 1f, 1f);
+				}
+			}
 		}
 	}
 }

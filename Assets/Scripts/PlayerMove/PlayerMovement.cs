@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour {
 	void Update() {
 		// speedOfShip 
 		MoveThePlayer();
-		// characterController.Move(Vector3.forward * Time.deltaTime * (speedOfShip/2));
+		characterController.Move(transform.forward * Time.deltaTime * (speedOfShip/10));
 
 		// Debug.Log(s		// Debug.Log("Player speed =" + speedOfShip);peedOfShip);
 	}

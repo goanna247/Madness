@@ -85,6 +85,10 @@ public class FightManager : MonoBehaviour {
 		pirateLevel.text = Globals.PirateLevel.ToString();
 		playerLevel.text = Globals.PlayerLevel.ToString();
 
+		if (Globals.PirateShipHealthVar < 50 && Globals.PirateSailHealthVar > 30) {
+			SceneManager.LoadScene("NormalSea");
+		}
+
 		if (Globals.PirateSailHealthVar > 0 && Globals.PirateShipHealthVar > 0 && Globals.PirateCrewHealthVar > 0 && Globals.PirateCannonHealthVar > 0) {
 			if (playerTurn) {
 				PlayersTurn();
@@ -287,11 +291,10 @@ public class FightManager : MonoBehaviour {
 		Debug.Log("Player Turn over");
 	}
 
-
 	void PlayerBlast() {
 		if (!shot) {
 			if (Globals.selectedShipPiece == "SailHighlight") {
-				Globals.PirateSailHealthVar -= Globals.PlayerBlastDamage;
+				Globals.PirateSailHealthVar -= Globals.PlayerBlastDamage * (Globals.PlayerCannonHealthVar / 100);
 				DisplayHitData(Globals.selectedShipPiece);
 			} else if (Globals.selectedShipPiece == "PirateHighlight") {
 				Globals.PirateShipHealthVar -= Globals.PlayerBlastDamage;
@@ -300,7 +303,7 @@ public class FightManager : MonoBehaviour {
 				Globals.PirateCannonHealthVar -= Globals.PlayerBlastDamage;
 				DisplayHitData(Globals.selectedShipPiece);
 			} else if (Globals.selectedShipPiece == "EnemyShip") {
-				Globals.PirateCrewHealthVar -= Globals.PlayerBlastDamage;
+				Globals.PirateCrewHealthVar -= Globals.PlayerBlastDamage / 4;
 				DisplayHitData(Globals.selectedShipPiece);
 			}
 		}

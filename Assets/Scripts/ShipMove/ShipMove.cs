@@ -17,11 +17,11 @@ public class ShipMove : MonoBehaviour {
 
 		transform.position += transform.forward * Time.deltaTime * speedOfShip;
 
-		if (Input.GetKey("l")) {
+		if (Input.GetKey(KeyCode.LeftArrow)) {
 			Debug.Log("Entering loop with L");
 			transform.Rotate(Vector3.down * 60 * Time.deltaTime);
 		}
-		if (Input.GetKey("r")) {
+		if (Input.GetKey(KeyCode.RightArrow)) {
 			transform.Rotate(Vector3.up * 60 * Time.deltaTime);
 		}
  }

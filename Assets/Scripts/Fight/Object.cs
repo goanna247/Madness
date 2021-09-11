@@ -13,13 +13,11 @@ public class Object : MonoBehaviour {
 	[SerializeField] private GameObject shipHighlight;
 	Renderer sailRenderer;
 
-
 	void Start() {
 		sailRenderer = sailHighlight.GetComponent<Renderer>();
 	}
 
 	void Update() {
-
 		// Globals.selectedShipPiece = objectSelected;
 		ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 		if (Physics.Raycast(ray, out hit)) {
