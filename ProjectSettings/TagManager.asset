@@ -6,6 +6,12 @@ TagManager:
   tags:
   - Look Root
   - BelowDeck
+  - SailAdjuster
+  - Steer
+  - Sail
+  - PirateShip
+  - SailHighlight
+  - EnemyPirate
   layers:
   - Default
   - TransparentFX

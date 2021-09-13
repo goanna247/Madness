@@ -30,6 +30,8 @@ public class GenerateOcean : MonoBehaviour {
 	}
 
 	void Update() {
+		Debug.Log(sizeZ);
+		Debug.Log(shipZpos);
 		shipXpos = ship.transform.position.x;
 		shipYpos = ship.transform.position.y;
 		shipZpos = ship.transform.position.z;

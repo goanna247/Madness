@@ -34,7 +34,6 @@ public class PlayerMovement : MonoBehaviour {
 
 		moveDirection = transform.TransformDirection(moveDirection);
 		moveDirection *= speed * Time.deltaTime;
-
 		ApplyGravity();
 
 		characterController.Move(moveDirection);

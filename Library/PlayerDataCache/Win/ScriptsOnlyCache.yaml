@@ -1,11 +1,23 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - BelowDeckButtonManager
+    - EnemyManager
+    - EnemyShip
+    - FightButton
+    - FightManager
+    - GenerateOcean
+    - HealthBars
+    - HighlightShip
     - LowPolyWater.LowPolyWater
     - MenuButtonManager
     - MouseLook
+    - Object
+    - PirateShipMove
+    - PlayerHealth
     - PlayerMovement
     - ShipActions
+    - ShipMove
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.TestRunner.dll:
@@ -41,19 +53,21 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11716}
+      Script: {instanceID: 11718}
     - Class: 114
-      Script: {instanceID: 11894}
+      Script: {instanceID: 11902}
     - Class: 114
-      Script: {instanceID: 11934}
+      Script: {instanceID: 11936}
     - Class: 114
-      Script: {instanceID: 12372}
+      Script: {instanceID: 11946}
     - Class: 114
-      Script: {instanceID: 12832}
+      Script: {instanceID: 12388}
     - Class: 114
-      Script: {instanceID: 13370}
+      Script: {instanceID: 12852}
     - Class: 114
-      Script: {instanceID: 13752}
+      Script: {instanceID: 13394}
+    - Class: 114
+      Script: {instanceID: 13780}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -115,19 +129,19 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11716}
+      Script: {instanceID: 11718}
     - Class: 114
-      Script: {instanceID: 11934}
+      Script: {instanceID: 11946}
     - Class: 114
-      Script: {instanceID: 12372}
+      Script: {instanceID: 12388}
     - Class: 114
-      Script: {instanceID: 12832}
+      Script: {instanceID: 12852}
     - Class: 114
-      Script: {instanceID: 13370}
+      Script: {instanceID: 13394}
     - Class: 114
-      Script: {instanceID: 13752}
+      Script: {instanceID: 13616}
     - Class: 114
-      Script: {instanceID: 19252}
+      Script: {instanceID: 13780}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -174,26 +188,58 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 12200}
+      Script: {instanceID: 11702}
     - Class: 114
-      Script: {instanceID: 12238}
+      Script: {instanceID: 11718}
     - Class: 114
-      Script: {instanceID: 12492}
+      Script: {instanceID: 11804}
     - Class: 114
-      Script: {instanceID: 13768}
+      Script: {instanceID: 11902}
     - Class: 114
-      Script: {instanceID: 14082}
+      Script: {instanceID: 11904}
     - Class: 114
-      Script: {instanceID: 14086}
+      Script: {instanceID: 11946}
     - Class: 114
-      Script: {instanceID: 14122}
+      Script: {instanceID: 12048}
+    - Class: 114
+      Script: {instanceID: 12214}
+    - Class: 114
+      Script: {instanceID: 12252}
+    - Class: 114
+      Script: {instanceID: 12300}
+    - Class: 114
+      Script: {instanceID: 12388}
+    - Class: 114
+      Script: {instanceID: 12472}
+    - Class: 114
+      Script: {instanceID: 12510}
+    - Class: 114
+      Script: {instanceID: 13336}
+    - Class: 114
+      Script: {instanceID: 13394}
+    - Class: 114
+      Script: {instanceID: 13780}
+    - Class: 114
+      Script: {instanceID: 13796}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 136
       Script: {instanceID: 0}
     - Class: 143
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
     Assets/Scenes/PirateFight.unity:
     - Class: 1
@@ -204,9 +250,21 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
     - Class: 28
       Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
     - Class: 48
+      Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
+    - Class: 65
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
@@ -214,17 +272,71 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11718}
+    - Class: 114
+      Script: {instanceID: 11766}
+    - Class: 114
+      Script: {instanceID: 11902}
+    - Class: 114
+      Script: {instanceID: 11946}
+    - Class: 114
+      Script: {instanceID: 12048}
+    - Class: 114
+      Script: {instanceID: 12214}
+    - Class: 114
+      Script: {instanceID: 12388}
+    - Class: 114
+      Script: {instanceID: 12510}
+    - Class: 114
+      Script: {instanceID: 12720}
+    - Class: 114
+      Script: {instanceID: 12852}
+    - Class: 114
+      Script: {instanceID: 13048}
+    - Class: 114
+      Script: {instanceID: 13244}
+    - Class: 114
+      Script: {instanceID: 13394}
+    - Class: 114
+      Script: {instanceID: 13780}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 137
+      Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
       Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
   scriptHashData:
+  - hash:
+      serializedVersion: 2
+      Hash: 254aced5d715eaed21bcea91c61c8439
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GenerateOcean
   - hash:
       serializedVersion: 2
       Hash: 4bc4346a71a8df53a6b106f68ef3a190
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: CanvasScaler
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Globals
   - hash:
       serializedVersion: 2
       Hash: f40fedccd4adbc76605bea6d67537e4b
@@ -239,10 +351,22 @@ ScriptsOnlyBuild:
     className: AudioPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: 93065a7050aa824fef0b0786ca8ed782
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FightButton
+  - hash:
+      serializedVersion: 2
       Hash: 4298152c7490141086c39d1836a5a43a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_Dropdown
+  - hash:
+      serializedVersion: 2
+      Hash: 878e33fc40867124d044d1842fc84dbb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyShip
   - hash:
       serializedVersion: 2
       Hash: e7a73f5f78ba6445195ec23b74a1ce2d
@@ -275,6 +399,12 @@ ScriptsOnlyBuild:
     className: Text
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PirateShipMove
+  - hash:
+      serializedVersion: 2
       Hash: fd8b23ad3c9e81bc85b197495bc510ac
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -291,6 +421,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: 0300361bd7a5f07c2c2c22009a7b0ccb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BelowDeckButtonManager
   - hash:
       serializedVersion: 2
       Hash: a6e561615949734e9f12f9b61661f43e
@@ -315,6 +451,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: GridLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: dab32a77dd9b02554a8076915033b8fd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HealthBars
   - hash:
       serializedVersion: 2
       Hash: 8aa3d6ccbcb54ee8db6c1229854adaaa
@@ -389,6 +531,12 @@ ScriptsOnlyBuild:
     className: Mask
   - hash:
       serializedVersion: 2
+      Hash: 783d3080c7089153a70c04ab6da7df5d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerHealth
+  - hash:
+      serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -423,6 +571,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Selectable
+  - hash:
+      serializedVersion: 2
+      Hash: 4f60ebc344c0074c822acfb779647e98
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyManager
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -461,6 +615,12 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
+      Hash: 5d461649f8d64e5b1a1acc0f45251754
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FightManager
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
@@ -489,6 +649,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: VerticalLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HighlightShip
   - hash:
       serializedVersion: 2
       Hash: 306ce4b0929fbd320ac2e81c0fb1c2f4
@@ -545,13 +711,19 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
+      Hash: 03b1778db048d0b3d4518de539817415
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Object
+  - hash:
+      serializedVersion: 2
       Hash: e4aac510b698bae77a5dbde189fe88e5
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
-      Hash: ed9ec8ee8950ae0ea7e0d14749dbfe2b
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ShipMove
@@ -575,6 +747,12 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MoveWithShip
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -585,6 +763,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_StyleSheet
+  - hash:
+      serializedVersion: 2
+      Hash: 1badb1a8bc3bfd9ea7016e6ba7cf56eb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MenuButtonManager
   - hash:
       serializedVersion: 2
       Hash: a01d7cd1372d550f912f7121e6ebe739
@@ -693,12 +877,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 1badb1a8bc3bfd9ea7016e6ba7cf56eb
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MenuButtonManager
   platform: 5
   scenePathNames:
   - Assets/Scenes/Menu.unity
@@ -706,4 +884,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/LoadingPage.unity
   - Assets/Scenes/BelowDeck.unity
   - Assets/Scenes/PirateFight.unity
-  playerPath: C:/Users/61412/Documents/school stuf/Y11/ColourfulWordStuff/GameDevelopment/Madness/Madness/Build1/Madness.exe
+  playerPath: C:/Users/61412/Documents/school stuf/Y11/ColourfulWordStuff/GameDevelopment/Madness/Madness/Build2/Madness.exe

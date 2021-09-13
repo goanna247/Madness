@@ -20,7 +20,9 @@ public class Object : MonoBehaviour {
 	void Update() {
 		// Globals.selectedShipPiece = objectSelected;
 		ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+		// Debug.Log(ray);
 		if (Physics.Raycast(ray, out hit)) {
+			// Debug.Log(Physics.Raycast(ray, out hit));
 			if (Input.GetMouseButtonDown(0)) {
 				objectSelected = hit.collider.name;
 				// Debug.Log(objectSelected);
